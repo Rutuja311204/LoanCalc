@@ -15,4 +15,4 @@ ENV SERVER_ROOT=/app/public
 
 EXPOSE 8080
 
-CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile", "--root", "/app/public"]
+CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile"]
