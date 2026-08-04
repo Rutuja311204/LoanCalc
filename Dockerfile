@@ -11,6 +11,8 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 
+ENV SERVER_ROOT=/app/public
+
 EXPOSE 8080
 
-CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile"]
+CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile", "--root", "/app/public"]
