@@ -1,0 +1,273 @@
+/* ==========================================================
+   LoanCalc - Custom Stylesheet
+   Banking-app theme inspired by HDFC/ICICI (blue + red accents)
+   ========================================================== */
+
+:root {
+    --lc-primary: #0d3b66;
+    --lc-primary-light: #14539c;
+    --lc-accent: #e6342b;
+    --lc-accent-2: #f7941d;
+    --lc-bg-soft: #f4f7fb;
+    --lc-success: #1d9c5c;
+    --lc-radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--lc-bg-soft);
+    color: #263646;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+a { text-decoration: none; }
+
+.text-primary-custom { color: var(--lc-primary) !important; }
+.bg-primary-custom { background-color: var(--lc-primary) !important; }
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--lc-primary), var(--lc-primary-light));
+    color: #fff !important;
+    border: none;
+    font-weight: 600;
+    transition: all .25s ease;
+}
+.btn-primary-custom:hover {
+    filter: brightness(1.1);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-accent {
+    background: var(--lc-accent);
+    color: #fff !important;
+    border: none;
+    font-weight: 600;
+}
+.btn-accent:hover { filter: brightness(1.08); color: #fff; }
+
+/* ---------------- Navbar ---------------- */
+.navbar-brand-custom {
+    background: #fff;
+    box-shadow: 0 2px 14px rgba(13, 59, 102, .08);
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+.navbar-brand-custom .navbar-brand {
+    font-weight: 800;
+    color: var(--lc-primary);
+    font-size: 1.5rem;
+}
+.navbar-brand-custom .navbar-brand span { color: var(--lc-accent); }
+.navbar-brand-custom .nav-link {
+    font-weight: 500;
+    color: #43526b;
+    margin: 0 .35rem;
+    position: relative;
+}
+.navbar-brand-custom .nav-link:hover,
+.navbar-brand-custom .nav-link.active { color: var(--lc-primary); }
+
+.avatar-circle {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--lc-primary);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .85rem;
+}
+
+/* ---------------- Hero ---------------- */
+.hero-section {
+    background: linear-gradient(120deg, var(--lc-primary) 0%, #123a63 60%, #0a2647 100%);
+    color: #fff;
+    padding: 90px 0 130px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section::after {
+    content: "";
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(230,52,43,.25), transparent 70%);
+    border-radius: 50%;
+}
+.hero-section h1 { font-size: 2.75rem; line-height: 1.2; }
+.hero-stats .stat-box {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: var(--lc-radius);
+    padding: 1rem 1.25rem;
+    backdrop-filter: blur(4px);
+}
+
+/* ---------------- Cards ---------------- */
+.card-custom {
+    border: none;
+    border-radius: var(--lc-radius);
+    box-shadow: 0 8px 30px rgba(13, 59, 102, .08);
+    transition: transform .25s ease, box-shadow .25s ease;
+    background: #fff;
+}
+.card-custom:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(13, 59, 102, .14);
+}
+
+.loan-type-icon {
+    width: 62px; height: 62px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--lc-primary), var(--lc-primary-light));
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+}
+
+.step-circle {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--lc-accent);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+}
+
+/* ---------------- Section headers ---------------- */
+.section-badge {
+    display: inline-block;
+    background: rgba(13,59,102,.08);
+    color: var(--lc-primary);
+    font-weight: 600;
+    font-size: .8rem;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    padding: .3rem 1rem;
+    border-radius: 30px;
+}
+
+/* ---------------- EMI Calculator ---------------- */
+.emi-result-card {
+    border-radius: var(--lc-radius);
+    background: linear-gradient(135deg, var(--lc-primary), #123a63);
+    color: #fff;
+}
+.form-range::-webkit-slider-thumb { background: var(--lc-primary); }
+.form-range::-moz-range-thumb { background: var(--lc-primary); }
+
+.table-schedule thead { background: var(--lc-primary); color: #fff; }
+
+/* ---------------- Auth pages ---------------- */
+.auth-wrapper {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
+.auth-card {
+    border-radius: var(--lc-radius);
+    box-shadow: 0 20px 50px rgba(13, 59, 102, .12);
+    overflow: hidden;
+}
+.auth-side {
+    background: linear-gradient(160deg, var(--lc-primary), #0a2647);
+    color: #fff;
+    padding: 3rem;
+}
+
+/* ---------------- Dashboard / Sidebar ---------------- */
+.dash-sidebar {
+    background: #fff;
+    border-radius: var(--lc-radius);
+    box-shadow: 0 8px 30px rgba(13,59,102,.06);
+    padding: 1.25rem;
+}
+.dash-sidebar .nav-link {
+    color: #43526b;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: .65rem 1rem;
+    margin-bottom: .25rem;
+}
+.dash-sidebar .nav-link.active,
+.dash-sidebar .nav-link:hover {
+    background: var(--lc-primary);
+    color: #fff;
+}
+
+.stat-card {
+    border-radius: var(--lc-radius);
+    padding: 1.5rem;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+.stat-card.bg-1 { background: linear-gradient(135deg,#0d3b66,#14539c); }
+.stat-card.bg-2 { background: linear-gradient(135deg,#1d9c5c,#26c281); }
+.stat-card.bg-3 { background: linear-gradient(135deg,#e6342b,#f2645a); }
+.stat-card.bg-4 { background: linear-gradient(135deg,#f7941d,#fbb034); }
+
+/* ---------------- Badges ---------------- */
+.badge-pending { background: #f7941d; }
+.badge-under_review { background: #14539c; }
+.badge-approved { background: #1d9c5c; }
+.badge-rejected { background: #e6342b; }
+.badge-disbursed { background: #6f42c1; }
+
+/* ---------------- Footer ---------------- */
+.footer-custom { background: #0a2647; }
+.footer-links li { margin-bottom: .5rem; }
+.footer-links a { color: rgba(255,255,255,.6); }
+.footer-links a:hover { color: #fff; }
+
+/* ---------------- Loader ---------------- */
+.page-loader {
+    position: fixed; inset: 0;
+    background: #fff;
+    z-index: 2000;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity .4s ease, visibility .4s ease;
+}
+.page-loader.hide { opacity: 0; visibility: hidden; }
+
+.spinner-ring { display: inline-block; position: relative; width: 64px; height: 64px; }
+.spinner-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px; height: 51px;
+    margin: 6px;
+    border: 6px solid var(--lc-primary);
+    border-radius: 50%;
+    animation: spinner-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: var(--lc-primary) transparent transparent transparent;
+}
+.spinner-ring div:nth-child(1) { animation-delay: -0.45s; }
+.spinner-ring div:nth-child(2) { animation-delay: -0.3s; }
+.spinner-ring div:nth-child(3) { animation-delay: -0.15s; }
+@keyframes spinner-ring {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ---------------- Animations ---------------- */
+.fade-in-up {
+    animation: fadeInUp .7s ease both;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- Misc ---------------- */
+.rounded-xl { border-radius: var(--lc-radius) !important; }
+.divider-accent {
+    width: 60px; height: 4px;
+    background: var(--lc-accent);
+    border-radius: 4px;
+}
